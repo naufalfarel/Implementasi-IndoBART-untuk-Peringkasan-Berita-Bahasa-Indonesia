@@ -3,9 +3,23 @@ venv/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-**/outputs/
 **/extracted_temp/
 .env
 *.egg-info/
 dist/
 build/
+
+# Ignore general outputs but keep checkpoint-625
+notebook/outputs/*.csv
+notebook/outputs/*.png
+notebook/outputs/indobart_finetuned/checkpoint-312/
+notebook/outputs/indobart_finetuned/checkpoint-936/
+notebook/outputs/indobart_finetuned/model.safetensors
+notebook/outputs/indobart_finetuned/training_args.bin
+notebook/outputs/indobart_finetuned/generation_config.json
+notebook/outputs/indobart_finetuned/added_tokens.json
+
+# Ignore training states of checkpoint-625
+notebook/outputs/indobart_finetuned/checkpoint-625/optimizer.pt
+notebook/outputs/indobart_finetuned/checkpoint-625/scheduler.pt
+notebook/outputs/indobart_finetuned/checkpoint-625/rng_state.pth
